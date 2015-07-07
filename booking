@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package uwe.movie;
+
+/**
+ *
+ * @author Anurudda
+ */
+public class Booking {
+    private int id;
+    private Showing showing;
+    private int numOfSeats;
+    private String dateTime;
+    
+    public Booking(int id, Showing sh, int numOfS, String dt){
+        this.id = id;
+        this.showing = sh;
+        this.numOfSeats = numOfS;
+        this.dateTime = dt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Showing getShowing() {
+        return showing;
+    }
+
+    public int getNumOfSeats() {
+        return numOfSeats;
+    }
+
+    public String getDateTime() {
+        return dateTime;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setShowing(Showing showing) {
+        this.showing = showing;
+    }
+
+    public void setNumOfSeats(int numOfSeats) {
+        this.numOfSeats = numOfSeats;
+    }
+
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
+    
+    
+    public String toString(){
+        return "ID : "+this.id+"\nFilm : "
+                +this.showing.getFilm().getName()+"\nNum of Seats : "+this.numOfSeats
+                +"\nDate Time : "+this.dateTime;
+    }
+    
+}
+
+
